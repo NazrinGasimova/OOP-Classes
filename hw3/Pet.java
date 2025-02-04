@@ -7,11 +7,11 @@ _________________________
 | - species : String    |
 | - nickname : String   |
 | - age : int           |
-| - tricklevel : int    |
+| - trickLevel : int    |
 | - habits : String[]   |
 -------------------------
 | + Pet()               |
-| + public Pet(String species,String nickname,int age,int tricklevel,String[] habits)|
+| + public Pet(String species,String nickname,int age,int trickLevel,String[] habits)|
 | + public Pet(String species,String nickname) |
 | + eat                 |
 | + respond             |
@@ -24,11 +24,8 @@ public class Pet{
     String species;
     String nickname;
     int age;
-    int tricklevel;
+    int trickLevel;
     String[] habits;
-    public Pet(String nickname){
-        this.nickname=nickname;
-    }
     public Pet() {
     }
     public Pet(String species,String nickname){
@@ -36,11 +33,11 @@ public class Pet{
         this.nickname=nickname;
 
     }
-    public Pet(String species,String nickname,int age,int tricklevel,String[] habits){
+    public Pet(String species,String nickname,int age,int trickLevel,String[] habits){
         this.species=species;
         this.nickname=nickname;
         this.age=age;
-        this.tricklevel=tricklevel;
+        this.trickLevel=trickLevel;
         this.habits=habits;
     }
     public void eat(){
@@ -54,6 +51,6 @@ public class Pet{
     }
 
     public String toString(){
-        return species+"{nickname='"+nickname+"',age="+age+",tricklevel="+tricklevel+",habits="+ Arrays.toString(habits) +"}";
+        return species+"{nickname='"+nickname+"',age="+age+",trickLevel="+trickLevel+",habits="+ Arrays.toString(habits) +"}";
     }
 }
