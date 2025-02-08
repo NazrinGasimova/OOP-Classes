@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[][] schedule = {
+                {"Sunday", "do home work"},
+                {"Monday", "go to courses; watch a film"},
+                {"Tuesday", "go to the volleyball"},
+                {"Wednesday", "spend time with ur friends"},
+                {"Thursday", "play video games"},
+                {"Friday", "do shopping"},
+                {"Saturday", "rest and refresh ur mind"}
+        };
+        while (true) {
+            System.out.println("Please, input the day of the week: ");
+            String input = scanner.nextLine().toLowerCase();
+            if (input.equals("exit")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+            boolean f = false;
+            for (String[] day : schedule) {
+                if (day[0].equalsIgnoreCase(input)) {
+                    System.out.println("Your tasks for " + day[0] + ": " + day[1] + ".");
+                    f = true;
+                    break;
+                }
+            }
+            if (!f) {
+                System.out.println("Sorry, I don't understand you, please try again.");
+            }
+        }
+        scanner.close();
+    }
+}
