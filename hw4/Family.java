@@ -98,4 +98,8 @@ public class Family {
         result = 31 * result + Arrays.hashCode(children);
         return result;
     }
+    @Override
+    protected void finalize() throws Throwable {
+        throw new UnsupportedOperationException();
+    }
 }
