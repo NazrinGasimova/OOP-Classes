@@ -6,7 +6,7 @@ public class Human {
     private String surname;
     private int year;
     private int iq;
-    private DayOfWeek[][] schedule;
+    private String[][] schedule;
     private Family family;
 
     public Human(String name, String surname, int year){
@@ -15,7 +15,7 @@ public class Human {
         this.year = year;
     }
 
-    public Human(String name, String surname, int year, int iq, DayOfWeek[][] schedule){
+    public Human(String name, String surname, int year, int iq, String[][] schedule){
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -46,10 +46,10 @@ public class Human {
     public void setIq(int iq){
         this.iq = iq;
     }
-    public DayOfWeek[][] getSchedule(){
+    public String[][] getSchedule(){
         return schedule;
     }
-    public void setSchedule(DayOfWeek[][] schedule){
+    public void setSchedule(String[][] schedule){
         this.schedule = schedule;
     }
     public Family getFamily(){
