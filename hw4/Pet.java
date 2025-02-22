@@ -75,4 +75,8 @@ public class Pet {
         result = 31 * result + Arrays.hashCode(habits);
         return result;
     }
+    @Override
+    protected void finalize() throws Throwable {
+        throw new UnsupportedOperationException();
+    }
 }
