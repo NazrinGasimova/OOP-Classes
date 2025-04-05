@@ -1,10 +1,14 @@
 public class ex2 {
     public static void main(String[] args) {
-        int[] arr = {12 ,4 ,0 ,48};
-        try {
-            int ans=arr[1]/arr[2];
-            System.out.println(ans);
-        } catch (ArithmeticException e) {
+        try{
+            int [] arr={3,4,0};
+            System.out.println(arr[3]);
+            System.out.println(arr[1]/arr[2]);
+
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException. Check the index u wrote");
+        } catch (ArithmeticException ex) {
             System.out.println("ArithmeticException. u can not use zero as a divisor");
         }
     }
